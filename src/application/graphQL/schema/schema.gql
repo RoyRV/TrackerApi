@@ -1,7 +1,10 @@
+scalar DateTime
+
 type User {
   id: ID!
   name: String!
   email: String!
+  startDate: DateTime
 }
 
 type Query {
