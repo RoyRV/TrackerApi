@@ -1,5 +1,6 @@
 import UserResolver from "./user.resolver";
 import DateTimeResolver from "./datetime.resolver";
+import { User } from "../../../domain/entities/user.model";
 
 const userResolver = new UserResolver();
 
@@ -9,6 +10,16 @@ export default {
   Query: {
     getUsers() {
       return userResolver.getUsers();
+    },
+  },
+  Mutation: {
+    createUser(_parent: any,
+      args: { input: any },
+      _context: any,
+      _info: any) {
+      console.log("args",args);
+      userResolver.create(args.input)
+      return true;
     },
   },
 };

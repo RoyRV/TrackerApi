@@ -10,3 +10,14 @@ type User {
 type Query {
   getUsers: [User!]
 }
+
+type Mutation {
+  createUser(input:CreateUserInput) : Boolean
+}
+
+input CreateUserInput {
+  id: ID!
+  name: String!
+  email: String!
+  startDate: DateTime
+}

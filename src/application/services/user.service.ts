@@ -8,7 +8,11 @@ export default class UserService {
     this._repository = new UserRepository();
   }
 
-  public getAll(): Array<User> {
-    return this._repository.getAll();
+  public async getAll() {
+    return await this._repository.getAll();
+  }
+
+  public create(user: User) {
+    this._repository.create(user);
   }
 }
