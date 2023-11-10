@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "format": "prettier --write . --ignore-path .gitignore",
     "dev": "nodemon --exec ts-node-dev src/index.ts",
     "start": "node dist/index.js",
     "build": "tsc && cpx \"src/**/*.gql\" dist",
-    "format": "prettier --write . --ignore-path .gitignore"
+    "start_watch": "nodemon --watch src src/index.ts && start"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
   "devDependencies": {
     "@types/node": "18.15.10",
     "cpx": "1.5.0",
-    "dotenv": "16.0.3",
+    "dotenv": "^16.0.3",
     "nodemon": "2.0.22",
     "ts-node": "10.9.1",
     "ts-node-dev": "2.0.0",

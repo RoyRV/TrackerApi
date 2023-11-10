@@ -1,12 +1,11 @@
+require("dotenv").config();
 import express from "express";
 import { ApolloServer, gql } from "apollo-server-express";
 import { readFileSync } from "fs";
-import resolvers from "./application/graphQL/resolvers/index";
-
-const typeDefs = readFileSync("./src/application/graphQL/schema/schema.gql", {
+import resolvers from "./presentation/graphQL/resolvers";
+const typeDefs = readFileSync("./src/presentation/graphQL/schema/schema.gql", {
   encoding: "utf-8",
 });
-
 /**
  * @description The startApolloServer function creates a new ApolloServer instance with the typeDefs and resolvers defined above.
  * It then starts the server and creates a new express app.

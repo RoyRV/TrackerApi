@@ -1,6 +1,5 @@
 import UserResolver from "./user.resolver";
 import DateTimeResolver from "./datetime.resolver";
-import { User } from "../../../domain/entities/user.model";
 
 const userResolver = new UserResolver();
 

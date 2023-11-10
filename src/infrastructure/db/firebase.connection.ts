@@ -1,6 +1,6 @@
 import firebase from "firebase/compat/app"; // Import Firebase compat (version 9) for backward compatibility
 import "firebase/compat/firestore"; // Import Firestore compat (version 9) for backward compatibility
-import firebaseConfig from "../config/firebase.config";
+import firebaseConfig from "./firebase.config";
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
